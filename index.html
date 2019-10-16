@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>通讯录首字母查询</title>
+    <link rel="stylesheet" href="./css/sort.css">
+</head>
+<body>
+    <div class="box">
+        <div id="vm" class="j-listgroup">
+            <div id="letter"></div>
+            <div class="sort_box">
+                <!-- <div class="sort_list">
+                    <div class="num_name"></div>
+                </div> -->
+            </div>
+            <div class="initials">
+                <ul>
+                <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="./js/flexible.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.charfirst.pinyin.js"></script>
+    <script src="./js/sort.js"></script>
+    <script>
+        var names = ['小白','你好','乐乐','貂蝉','康康','曹操','鲁班','貂蝉'];
+        var ulHtml = '';
+        const res = names.forEach(function(item, index, arry){
+            ulHtml += "<div class='sort_list'>"
+                ulHtml +=    "<div class='num_name'>"+ item + "</div>"
+            ulHtml += "</div>"
+        })
+        $('.sort_box').html(ulHtml);
+    </script>
+</body>
+</html>
